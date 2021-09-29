@@ -1,0 +1,6 @@
+framework module Pods_goMoney_Football_App {
+  umbrella header "Pods-goMoney Football App-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--League Details Parent View Controller-->
+        <scene sceneID="x7b-Wq-ni8">
+            <objects>
+                <viewController storyboardIdentifier="LeagueDetailsParentViewController" id="pCW-dF-bWS" customClass="LeagueDetailsParentViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IKI-QB-IAO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZIv-X6-oxG" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="vde-88-60e"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QH0-NI-qHi">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-gT-ioq">
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kfT-hp-Qh6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AgE-gT-ioq" secondAttribute="bottom" id="J57-k6-FWc"/>
+                            <constraint firstAttribute="bottom" secondItem="AgE-gT-ioq" secondAttribute="bottom" id="Kmu-ud-NxA"/>
+                            <constraint firstItem="AgE-gT-ioq" firstAttribute="trailing" secondItem="kfT-hp-Qh6" secondAttribute="trailing" id="PLA-hL-Bdy"/>
+                            <constraint firstItem="ZIv-X6-oxG" firstAttribute="top" secondItem="kfT-hp-Qh6" secondAttribute="top" id="UcM-qY-q6z"/>
+                            <constraint firstItem="ZIv-X6-oxG" firstAttribute="leading" secondItem="kfT-hp-Qh6" secondAttribute="leading" id="hoa-LA-Jxu"/>
+                            <constraint firstItem="AgE-gT-ioq" firstAttribute="leading" secondItem="kfT-hp-Qh6" secondAttribute="leading" id="jRN-dP-aZn"/>
+                            <constraint firstItem="ZIv-X6-oxG" firstAttribute="trailing" secondItem="kfT-hp-Qh6" secondAttribute="trailing" id="qAS-pe-J9W"/>
+                            <constraint firstItem="AgE-gT-ioq" firstAttribute="top" secondItem="ZIv-X6-oxG" secondAttribute="bottom" id="sFf-qe-gMM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBarView" destination="ZIv-X6-oxG" id="eEL-oh-bEe"/>
+                        <outlet property="containerView" destination="AgE-gT-ioq" id="V6D-8w-R09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irK-8t-a3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-588.40579710144937" y="45.535714285714285"/>
+        </scene>
+        <!--League Table View Controller-->
+        <scene sceneID="a8d-3Q-kVr">
+            <objects>
+                <viewController storyboardIdentifier="table" id="J39-cC-Mje" customClass="LeagueTableViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pvm-JO-Zmt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Af-fR-CYT">
+                                <rect key="frame" x="186.5" y="437.5" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ocj-co-zCy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Af-fR-CYT" firstAttribute="centerX" secondItem="pvm-JO-Zmt" secondAttribute="centerX" id="7Jf-Ub-A0a"/>
+                            <constraint firstItem="8Af-fR-CYT" firstAttribute="centerY" secondItem="pvm-JO-Zmt" secondAttribute="centerY" id="YBo-Rf-Tw3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGI-41-fph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="46"/>
+        </scene>
+        <!--League Fixtures View Controller-->
+        <scene sceneID="Z3P-0a-A9p">
+            <objects>
+                <viewController storyboardIdentifier="fixtures" id="jWb-Da-7GG" customClass="LeagueFixturesViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CSJ-hV-jxH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fixtures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pH-9X-CTm">
+                                <rect key="frame" x="176.5" y="437.5" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gFo-zW-Did"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0pH-9X-CTm" firstAttribute="centerX" secondItem="CSJ-hV-jxH" secondAttribute="centerX" id="MPR-0s-opA"/>
+                            <constraint firstItem="0pH-9X-CTm" firstAttribute="centerY" secondItem="CSJ-hV-jxH" secondAttribute="centerY" id="YMa-9h-eB9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBS-Qk-3VU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="46"/>
+        </scene>
+        <!--League Teams View Controller-->
+        <scene sceneID="YKV-hw-VQM">
+            <objects>
+                <viewController storyboardIdentifier="team" id="9dJ-dR-bMq" customClass="LeagueTeamsViewController" customModule="goMoney_Football_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qml-pW-o8T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiq-8v-ZdR">
+                                <rect key="frame" x="182" y="437.5" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LPs-r3-z5R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kiq-8v-ZdR" firstAttribute="centerY" secondItem="Qml-pW-o8T" secondAttribute="centerY" id="QDk-W2-ugq"/>
+                            <constraint firstItem="kiq-8v-ZdR" firstAttribute="centerX" secondItem="Qml-pW-o8T" secondAttribute="centerX" id="xqu-YF-xce"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGK-T9-cHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
